@@ -1,27 +1,33 @@
-# Gene expression analysis: [PCA, clustering and feature interpretation]
+# Gene expression analysis: 
+## [PCA, clustering and feature interpretation]
 
 ## Overview
-This project demonstrates a comprehensive analysis of gene expression data using Principal Component Analysis (PCA), clustering, and feature interpretation techniques. The dataset used in this project is sourced from the GEO database. This dataset is used to explore the underlying patterns in gene expression, reduce dimensionality, perform clustering, and interpret the features that contribute most to the principal components.
+This project demonstrates a comprehensive analysis of gene expression data using Principal Component Analysis (PCA), clustering, and feature interpretation techniques. The dataset used in this project is sourced from the GEO database. 
 
 ## Dataset
-The gene expression dataset [GSE12345](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE12345) consists of gene expression profiles from various biological samples, including different conditions or treatments. 
- The aim of this project is to utilize PCA to reduce the dimensionality of the dataset, perform clustering to group similar samples, and interpret the features that contribute most to the principal components, thereby providing insights into the gene expression profiles.
+The gene expression dataset with an accession number [GSE12345](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE12345) consists of gene expression profiles of human pleural mesotheliomas samples.
 
-## Project Workflow
+> **Objective:** to utilize PCA to reduce the dimensionality of the dataset, perform clustering to group similar samples, and interpret the features that contribute most to the principal components. This helps to provide insights into the gene expression profiles.
 
-### 1. Data Loading and Preprocessing
+## Steps followed
+
+### 1. Data preprocessing
 - **Technique**: Standardization
 - **Description**: The gene expression data is loaded and standardized to ensure that each feature contributes equally to the analysis.
 
-### 2. Dimensionality Reduction using PCA
+### 2. Dimensionality reduction using PCA
 - **Algorithm**: Principal Component Analysis (PCA)
-- **Description**: PCA is applied to reduce the dimensionality of the dataset while retaining a significant amount of variance. The explained variance ratio and cumulative explained variance are calculated to determine the number of principal components needed.
+- **Description**: PCA is applied to reduce the dimensionality of the dataset. The explained variance ratio and cumulative explained variance are calculated to determine the number of principal components needed. 
+```bash
+variance_threshold = 0.95
+Number of components to retain 95.0% of variance: 11
+```
 
-### 3. Clustering of Transformed Data
+### 3. Clustering of transformed data
 - **Algorithm**: KMeans Clustering
-- **Description**: KMeans clustering is applied to the reduced-dimension data obtained from PCA. The clusters are visualized using the first two principal components.
+- **Description**: KMeans clustering is applied to the reduced-dimension data obtained from PCA. 
 
-### 4. Feature Interpretation
+### 4. Feature interpretation
 - **Technique**: Analysis of PCA Loadings
 - **Description**: The principal components are interpreted by identifying the top contributing genes. This helps in understanding which genes contribute most to the variability captured by each principal component.
 
