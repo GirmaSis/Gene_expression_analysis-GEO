@@ -1,8 +1,7 @@
-# Gene expression analysis: 
-## [PCA, clustering and feature interpretation]
+## Gene expression analysis: [PCA, clustering and feature interpretation]
 
 ## Overview
-This project demonstrates a comprehensive analysis of gene expression data using Principal Component Analysis (PCA), clustering, and feature interpretation techniques. The dataset used in this project is sourced from the GEO database. 
+This project demonstrates a comprehensive analysis of gene expression data using Principal Component Analysis (PCA), clustering, and feature interpretation techniques. The dataset used in this project is sourced from the Gene Expression Omnibus [GEO](https://www.ncbi.nlm.nih.gov/geo/) 
 
 ## Dataset
 The gene expression dataset with an accession number [GSE12345](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE12345) consists of gene expression profiles of human pleural mesotheliomas samples.
@@ -24,15 +23,15 @@ Number of components to retain 95.0% of variance: 11
 ```
 
 ### 3. Clustering of transformed data
-- **Algorithm**: KMeans Clustering
+- **Algorithm**: KMeans clustering
 - **Description**: KMeans clustering is applied to the reduced-dimension data obtained from PCA. 
 
 ### 4. Feature interpretation
-- **Technique**: Analysis of PCA Loadings
+- **Technique**: Analysis of PCA loadings
 - **Description**: The principal components are interpreted by identifying the top contributing genes. This helps in understanding which genes contribute most to the variability captured by each principal component.
 
-## Installation
-1. Clone the repository:
+## Usage
+Clone the repository:
    ```bash
    git clone https://github.com/yourusername/Gene_expression_analysis-GEO.git
    cd Gene_expression_analysis-GEO
